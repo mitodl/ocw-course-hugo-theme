@@ -1,0 +1,31 @@
+{{ $courseId := .context.Params.course_id }}
+{{ $courseData := index .context.Site.Data.courses $courseId }}
+<ul class="list-unstyled pb-2 m-0">
+{{ range $topic := $courseData.topics }}
+  {{ if gt (len $topic.subtopics) 0 }}
+    {{ range $subtopic := $topic.subtopics }}
+      {{ if gt (len $subtopic.specialities) 0 }}
+        {{ range $specialty := $subtopic.specialities }}
+          <li>
+            <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+            >
+            <a class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
+            >
+            <a class="text-black course-info-topic">{{ $specialty }}</a>
+          </li>
+        {{ end }}
+      {{ else }}
+        <li>
+          <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+          >
+          <a class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <li>
+      <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+    </li>
+  {{ end }}
+{{ end }}
+</ul>

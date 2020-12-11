@@ -1,0 +1,77 @@
+#mobile-header {
+  #ocw-logo-mobile {
+    width: 250px;
+    height: 39px;
+    top: 50%;
+    left: 50%;
+    margin-left: -115px;
+    margin-top: -18px;
+  }
+}
+
+$desktop-header-height: 70px;
+
+#desktop-header {
+  height: $desktop-header-height;
+  width: 100%;
+  position: absolute;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  .contents {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-content-width;
+    margin: auto;
+    height: 100%;
+
+    .right,
+    .left {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .left {
+      .ocw-logo {
+        img {
+          height: 40px;
+        }
+      }
+    }
+
+    .right {
+      justify-content: flex-end;
+
+      .orange-link {
+        background-color: $orange;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      a {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#course-banner {
+  color: $white;
+  background-color: $course-blue;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.header-placeholder {
+  height: $desktop-header-height;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
