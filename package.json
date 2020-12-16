@@ -29,10 +29,6 @@
     "url": "https://github.com/mitodl/ocw-course-hugo-theme/issues"
   },
   "homepage": "https://github.com/mitodl/ocw-course-hugo-theme#readme",
-  "engines": {
-    "node": "^12.13.0",
-    "yarn": "^1.19.1"
-  },
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-react-constant-elements": "^7.6.3",
