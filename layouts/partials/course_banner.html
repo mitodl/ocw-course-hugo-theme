@@ -1,0 +1,14 @@
+{{ $bannerClass := "text-uppercase display-4 font-weight-bold m-0 text-white" }}
+{{ $currentPage := . }}
+<div id="course-banner" class="p-0">
+  <div class="max-content-width m-auto px-5 py-6">
+    {{ $courseId := $currentPage.Params.course_id }}
+    {{ $courseData := index .Site.Data.courses $courseId }}
+    {{ $menu := index .Site.Menus $courseId }}
+    {{ $menuItem := index $menu 0 }}
+    <a
+      class="{{ $bannerClass }}"
+      href="{{ $menuItem.URL | relURL }}"
+    >{{ $courseData.course_title }}</a>
+  </div>
+</div>

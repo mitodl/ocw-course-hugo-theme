@@ -1,0 +1,18 @@
+{{ $currentPage := . }}
+{{ $courseId := .Params.course_id }}
+{{ $courseData := index .Site.Data.courses $courseId }}
+
+<div class="pb-4 rounded">
+  <header>
+    <div class="course-section-title-container">
+      <h1 class="text-uppercase font-weight-bold">{{ $currentPage.Title }}</h1>
+      {{ with $courseData.subtitle }}
+      <span class="subtitle">{{ . }}</span>
+      {{ end }}
+    </div>
+  </header>
+  {{ partial "mobile_nav_toggle.html" . }}
+  <article class="content pt-2">
+    <main>{{- $currentPage.Content -}}</main>
+  </article>
+</div>
