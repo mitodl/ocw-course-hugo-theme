@@ -1,6 +1,6 @@
 # ocw-course-hugo-theme
 
-This is a Hugo theme for rendering an OCW course.  It is implemented as a Hugo Module and can be utilized following the instructions [here](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme).  An example implementation can be found [here](https://github.com/mitodl/ocw-course-hugo-starter).  Before attempting to use this theme, you should have Node 12.13.0 installed using your preferred method, along with `gulp-cli` if you plan to use the PDF Viewer functionality.
+This is a Hugo theme for rendering an OCW course.  It is implemented as a Hugo Module and can be utilized following the instructions [here](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme).  An example implementation can be found [here](https://github.com/mitodl/ocw-course-hugo-starter).  Before attempting to use this theme, you should have Node installed using your preferred method, along with `gulp-cli` if you plan to use the PDF Viewer functionality.
 
 ## building dependencies
 
