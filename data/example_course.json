@@ -1,0 +1,36 @@
+{
+    "course_id": "18-06-linear-algebra-spring-2010",
+    "course_title": "Linear Algebra",
+    "course_image_url": "https://open-learning-course-data-production.s3.amazonaws.com/18-06-linear-algebra-spring-2010/862a5bbedf159572528b0f0766d1e611_18-06s10.jpg",
+    "course_thumbnail_image_url": "https://open-learning-course-data-production.s3.amazonaws.com/18-06-linear-algebra-spring-2010/e041d7e7fe57acfe0bf2d71a6815db0d_18-06s10-th.jpg",
+    "course_image_alternate_text": "A photograph of windows in Philadelphia, representing a block matrix.",
+    "course_image_caption_text": "<p class=\"instruction\">These windows in Philadelphia represent a beautiful block matrix. (Courtesy Gail Corbett. Used with permission.)</p>",
+    "publishdate": "2010-09-10T10:23:13-04:00",
+    "instructors": ["Prof. Gilbert Strang"],
+    "departments": ["Mathematics"],
+    "course_features": [{
+        "feature": "AV special element video",
+        "subfeature": "Tutorial"
+    }, {
+        "feature": "AV lectures",
+        "subfeature": "Video"
+    }, {
+        "feature": "Assignments",
+        "subfeature": "problem sets with solutions"
+    }, {
+        "feature": "Exams",
+        "subfeature": "Solutions"
+    }, {
+        "feature": "Instructor Insights"
+    }],
+    "topics": [{
+        "topic": "Mathematics",
+        "subtopics": [{
+            "subtopic": "Linear Algebra",
+            "specialities": []
+        }]
+    }],
+    "course_numbers": ["18.06"],
+    "term": "Spring 2010",
+    "level": "Undergraduate"
+}

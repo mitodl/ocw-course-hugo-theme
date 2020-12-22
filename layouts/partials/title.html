@@ -1,6 +1,6 @@
 {{ if isset .Params "course_id" }}
 {{ $courseId := .Params.course_id }}
-{{ $courseData := index .Site.Data.courses $courseId }}
+{{ $courseData := .Site.Data.course }}
 <title>{{- $titleArray := (slice) -}}
 {{- if .Params.Title -}}
   {{- $titleArray = $titleArray | append .Params.Title -}}

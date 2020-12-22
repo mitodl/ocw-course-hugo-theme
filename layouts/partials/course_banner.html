@@ -3,7 +3,7 @@
 <div id="course-banner" class="p-0">
   <div class="max-content-width m-auto px-5 py-6">
     {{ $courseId := $currentPage.Params.course_id }}
-    {{ $courseData := index .Site.Data.courses $courseId }}
+    {{ $courseData := .Site.Data.course }}
     {{ $menu := index .Site.Menus $courseId }}
     {{ $menuItem := index $menu 0 }}
     <a

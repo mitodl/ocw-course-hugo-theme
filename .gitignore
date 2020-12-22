@@ -46,9 +46,8 @@ data/webpack.json
 static/pdfjs
 static/zips
 static/webpack
-content/courses/*
-!content/courses/_index.md
 data/*
+!data/example_course.json
 ocw-to-hugo.*.log
 *.tgz
 zips

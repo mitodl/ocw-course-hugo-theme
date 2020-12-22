@@ -31,7 +31,7 @@ cp -r $THEME_PATH/dist/* $THEME_PATH/static
 
 ##  course data template
 
-Course level metadata is stored in a `.json` file in the `data/courses` directory with a filename matching the `course_id`.  For example, `1-124j-foundations-of-software-engineering-fall-2000`.
+Course level metadata is stored in a `course.json` file in the `data` directory.
 
 | key | example value | description |
 | --- | --- | --- |
