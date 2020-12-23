@@ -42,13 +42,11 @@ node_modules
 yarn-debug.log*
 yarn-error.log*
 .yarn-integrity
+data/course.json
 data/webpack.json
 static/pdfjs
 static/zips
 static/webpack
-content/courses/*
-!content/courses/_index.md
-data/*
 ocw-to-hugo.*.log
 *.tgz
 zips

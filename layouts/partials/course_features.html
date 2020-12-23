@@ -1,5 +1,5 @@
 {{ $courseId := .context.Params.course_id }}
-{{ $courseData := index .context.Site.Data.courses $courseId }}
+{{ $courseData := .context.Site.Data.course }}
 {{ $inPanel := .inPanel }}
 <div class="course-features w-100 {{ if $inPanel }}in-panel{{ else }}bg-light{{ end }}">
   <div class="container px-0 mx-0">
