@@ -6,7 +6,7 @@
       {{ block "main" . }}{{ end }}
     </div>
     {{- $course := .Site.Data.webpack.course -}}
-    {{- $courseJs := printf "/%s" "/" $course.js -}}
+    {{- $courseJs := printf "/%s" $course.js -}}
     <script src="{{ partial "webpack_url.html" $courseJs }}"></script>
   </body>
 </html>

@@ -68,7 +68,7 @@
   </script>
   {{ partialCached "navigation_js.html" . }}
   {{- $course := .Site.Data.webpack.course -}}
-  {{- $courseJs := printf "/%s" "/" $course.js }}
+  {{- $courseJs := printf "/%s" $course.js }}
   {{- $mathjax := .Site.Data.webpack.mathjax -}}
 
   <script src="{{ partial "webpack_url.html" $courseJs }}"></script>
