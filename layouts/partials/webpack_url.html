@@ -1,2 +1,2 @@
 {{ $baseUrl := urls.Parse site.BaseURL }}
-{{- printf "//%s/%s" $baseUrl.Host . -}}
+{{- printf "//%s%s" $baseUrl.Host . -}}
