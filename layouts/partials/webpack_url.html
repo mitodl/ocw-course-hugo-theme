@@ -1,2 +1,1 @@
-{{- $baseUrl := urls.Parse site.BaseURL -}}
-{{- printf "%s://%s" $baseUrl.Scheme (path.Join $baseUrl.Host .) -}}
+{{- printf "%s/%s" (strings.TrimSuffix "/" site.BaseURL) (strings.TrimPrefix "/" .) -}}
