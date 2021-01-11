@@ -1,6 +1,4 @@
 {{- $baseUrl := urls.Parse site.BaseURL -}}
-{{- $scheme := $baseUrl.Scheme -}}
-{{- $host := $baseUrl.Host -}}
 {{- if or (eq $baseUrl.Scheme nil) (eq $baseUrl.Host nil) -}}
     {{- printf "%s/%s" (strings.TrimSuffix "/" site.BaseURL) (strings.TrimPrefix "/" .) -}}
 {{- else -}}
