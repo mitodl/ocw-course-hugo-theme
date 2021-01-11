@@ -1,5 +1,5 @@
 {{ $baseUrl := urls.Parse site.BaseURL }}
 {{ if and (isset $baseUrl "Scheme") (isset $baseUrl "Host") }}
-    {{- printf "//%s/%s" $baseUrl.Host (strings.TrimPrefix "/" .) -}}
+    {{- printf "%s://%s/%s" $baseUrl.Scheme $baseUrl.Host (strings.TrimPrefix "/" .) -}}
 {{ else }}
     {{- printf "%s/%s" (strings.TrimSuffix "/" site.BaseURL) (strings.TrimPrefix "/" .) -}}
