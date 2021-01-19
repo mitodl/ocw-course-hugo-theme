@@ -70,8 +70,8 @@
   {{- $course := .Site.Data.webpack.course -}}
   {{- $mathjax := .Site.Data.webpack.mathjax -}}
 
-  <script src="{{ partial "webpack_url.html" $course.js }}"></script>
-  <script src="{{ partial "webpack_url.html" "/mathjax/tex-svg.js" }}" defer></script>
+  <script src="{{ partial "site_root_url.html" $course.js }}"></script>
+  <script src="{{ partial "site_root_url.html" "/mathjax/tex-svg.js" }}" defer></script>
 </body>
 
 </html>

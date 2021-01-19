@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   {{ partial "title.html" . }}
   {{ $course := .Site.Data.webpack.course }}
-  <link href="{{ partial "webpack_url.html" $course.css }}" rel="stylesheet">
+  <link href="{{ partial "site_root_url.html" $course.css }}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
 <style>
 @font-face {
@@ -12,9 +12,9 @@
   font-weight: 400;
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
-    url({{ partial "webpack_url.html" "/fonts/MaterialIcons-Regular.woff2" }}) format('woff2'),
-    url({{ partial "webpack_url.html" "/fonts/MaterialIcons-Regular.woff" }}) format('woff'),
-    url({{ partial "webpack_url.html" "/fonts/MaterialIcons-Regular.ttf" }}) format('truetype');
+    url({{ partial "site_root_url.html" "/fonts/MaterialIcons-Regular.woff2" }}) format('woff2'),
+    url({{ partial "site_root_url.html" "/fonts/MaterialIcons-Regular.woff" }}) format('woff'),
+    url({{ partial "site_root_url.html" "/fonts/MaterialIcons-Regular.ttf" }}) format('truetype');
 }
 </style>
 </head>
