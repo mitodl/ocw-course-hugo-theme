@@ -1,8 +1,8 @@
-function courseNav () {
+function courseNav() {
   document.querySelectorAll(".course-nav").forEach(navEl => {
     // set .active on the currently active link
     navEl.querySelectorAll(".nav-link").forEach(navLinkEl => {
-      if (navLinkEl.getAttribute('href') === window.location.pathname) {
+      if (navLinkEl.getAttribute("href") === window.location.pathname) {
         navLinkEl.classList.add("active")
       }
     })
