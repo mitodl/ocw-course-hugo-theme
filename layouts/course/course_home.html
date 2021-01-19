@@ -14,7 +14,7 @@
             {{- if hasPrefix $courseImageUrl "http" -}}
               {{ $courseImageUrl }}
             {{- else -}}
-              {{ relURL $courseImageUrl }}
+              {{ partial "webpack_url.html" $courseImageUrl }}
             {{- end -}}"
             alt="{{ $courseData.course_image_alternate_text }}"
           />
