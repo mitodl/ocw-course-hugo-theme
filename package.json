@@ -7,6 +7,7 @@
     "prebuild": "rimraf dist",
     "build": "npm run build:webpack",
     "build:webpack": "cross-env NODE_ENV=production webpack --config assets/webpack/webpack.prod.js",
+    "start:webpack": "webpack-dev-server --config assets/webpack/webpack.dev.js --hot --host 0.0.0.0",
     "lint": "eslint src build-scripts",
     "fmt": "LOG_LEVEL= prettier-eslint --write --no-semi $PWD/'build-scripts/**/*.js' $PWD/'assets/**/*.js' $PWD/'assets/**/*.scss'",
     "fmt:check": "LOG_LEVEL= prettier-eslint --list-different --no-semi $PWD/'build-scripts/**/*.js' $PWD/'assets/**/*.js' $PWD/'assets/**/*.scss'",
