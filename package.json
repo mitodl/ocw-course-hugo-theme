@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist",
+    "start": "npm run start:webpack",
     "build": "npm run build:webpack",
     "build:webpack": "cross-env NODE_ENV=production webpack --config assets/webpack/webpack.prod.js",
     "start:webpack": "webpack-dev-server --config assets/webpack/webpack.dev.js --hot --host 0.0.0.0",
