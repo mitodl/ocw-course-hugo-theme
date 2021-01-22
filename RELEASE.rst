@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.1.0
+Version 1.1.0 (Released January 22, 2021)
 -------------
 
 - create layout and style specifically for instructor insights (#20)
