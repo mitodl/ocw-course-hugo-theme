@@ -28,7 +28,8 @@ module.exports = merge(common, {
     },
     historyApiFallback: {
       rewrites: [{ from: /./, to: "404.html" }]
-    }
+    },
+    disableHostCheck: true
   },
 
   plugins: [
