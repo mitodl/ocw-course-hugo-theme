@@ -16,7 +16,7 @@ module.exports = merge(common, {
   devtool: "eval-source-map",
 
   devServer: {
-    port: process.env.PORT || 3001,
+    port: process.env.PORT || 3002,
     hot: true,
     quiet: false,
     open: false,
@@ -28,7 +28,8 @@ module.exports = merge(common, {
     },
     historyApiFallback: {
       rewrites: [{ from: /./, to: "404.html" }]
-    }
+    },
+    disableHostCheck: true
   },
 
   plugins: [
