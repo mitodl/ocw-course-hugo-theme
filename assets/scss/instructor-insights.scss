@@ -7,38 +7,30 @@ h2 {
 }
 
 .quotewrapper {
-  float: left;
-  width: 75%;
-  border-right: 1px solid #d5c9ba;
-  padding-right: 12px;
-  padding-bottom: 12px;
-  margin: 3px 12px 10px 0;
-  line-height: 1.6em;
+  margin: 0;
+  line-height: 1.75em;
 }
 
-.quotewrapper p {
-  font-size: 1.2em;
-  color: #aaa;
+.quotewrapper blockquote,
+figcaption {
+  font-family: "Helvetica-Oblique", "Helvetica", sans-serif;
+  font-style: italic;
   margin: 0;
 }
 
-.quotewrapper p.quote {
-  text-indent: 2.2em;
-  padding-top: 4px;
-  background-repeat: no-repeat;
-  background-position: top left;
+.quotewrapper blockquote.quote {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: $text-gray;
 }
 
-.quotewrapper p.sig {
-  font-family: TitilliumWeb400Regular, Verdana;
-  font-weight: 500;
-  font-size: 1.0em;
-  color: #777;
-  text-align: right;
+.quotewrapper .sigwrapper {
+  display: flex;
+}
+
+.quotewrapper figcaption.sig {
+  margin-left: auto;
   text-transform: uppercase;
-  padding-top: 30px;
-  margin-top: -12px;
-  margin-bottom: 0;
-  background-repeat: no-repeat;
-  background-position: top right;
+  order: 2;
+  font-size: 1.25em;
 }

@@ -4,7 +4,9 @@
 */}}
 {{ $quoteOpen := "/images/quote_open.png" }}
 {{ $quoteClose := "/images/quote_close.png" }}
-<div class="quotewrapper">
-  <p class="quote" style="background-image: url({{ partial "site_root_url.html" $quoteOpen }});">{{ .Get 0 }}</p>
-  <p class="sig" style="background-image: url({{ partial "site_root_url.html" $quoteClose }});">{{ .Get 1 }}</p>
-</div>
+<figure class="quotewrapper py-3">
+  <blockquote class="quote">"{{ .Get 0 }}"</blockquote>
+  <div class="sigwrapper">
+    <figcaption class="sig">{{ .Get 1 }}</figcaption>
+  </div>
+</figure>
