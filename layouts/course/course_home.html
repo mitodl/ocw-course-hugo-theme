@@ -29,7 +29,7 @@
         <div class="mb-3 description">{{- .Content -}}</div>
         <div class="mb-3">
           {{ if $shouldCollapseContent }}
-            <button class="expand-link">
+            <button class="expand-link" aria-expanded="false">
               <span class="text">Read More</span> <i class="material-icons">keyboard_arrow_right</i>
             </button>
           {{ end }}
