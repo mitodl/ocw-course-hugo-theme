@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.2.0
+Version 1.2.0 (Released January 26, 2021)
 -------------
 
 - quote shortcode (#22)
