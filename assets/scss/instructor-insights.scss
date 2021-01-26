@@ -5,3 +5,32 @@ h2 {
   color: $black !important;
   border-bottom: 3px solid $border-dark-color;
 }
+
+.quotewrapper {
+  margin: 0;
+  line-height: 1.75em;
+}
+
+.quotewrapper blockquote,
+figcaption {
+  font-family: "Helvetica-Oblique", "Helvetica", sans-serif;
+  font-style: italic;
+  margin: 0;
+}
+
+.quotewrapper blockquote.quote {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: $text-gray;
+}
+
+.quotewrapper .sigwrapper {
+  display: flex;
+}
+
+.quotewrapper figcaption.sig {
+  margin-left: auto;
+  text-transform: uppercase;
+  order: 2;
+  font-size: 1.25em;
+}
