@@ -3,7 +3,11 @@
 h2 {
   max-width: 795px;
   color: $black !important;
-  border-bottom: 3px solid $border-dark-color;
+  margin-bottom: 1.25rem !important;
+}
+
+p {
+  margin-bottom: 1.25rem;
 }
 
 .quotewrapper {
