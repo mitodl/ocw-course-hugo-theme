@@ -1,8 +1,15 @@
+{{- $gtmId := getenv "GTM_ACCOUNT_ID" -}}
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ block "extrahead" . }}{{ end }}
   {{ partial "head.html" . }}
 <body class="course-home-page">
+  {{ if $gtmId }}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmId }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  {{ end }}
   <div class="overflow-auto">
     {{ partialCached "mobile_course_nav.html" . .Params.course_id }}
     {{ partialCached "mobile_course_info.html" . .Params.course_id }}
