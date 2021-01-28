@@ -2,6 +2,8 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "OCW Course Hugo Starter"
 
+staticDir = ["static", "/static"]
+
 [module]
   [[module.imports]]
     path = "github.com/mitodl/ocw-course-hugo-theme"
