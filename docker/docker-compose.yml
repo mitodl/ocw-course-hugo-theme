@@ -1,0 +1,26 @@
+---
+
+services:
+  ocw-course-hugo-theme:
+    container_name: ocw-course-hugo-theme
+    image: ocw-course-hugo-theme:latest
+    environment:
+      - AWS_REGION
+      - AWS_BUCKET_NAME
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - OCW_TEST_COURSE
+    volumes:
+      - ocw-data:/ocw-data
+      - hugo:/hugo
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+      args:
+        - OCW_TEST_COURSE=$OCW_TEST_COURSE
+    ports:
+      - "3002:3002"
+      - "1313:1313"
+volumes:
+  ocw-data:
+  hugo:
