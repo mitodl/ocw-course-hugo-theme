@@ -13,6 +13,7 @@ services:
     volumes:
       - ocw-data:/ocw-data
       - hugo:/hugo
+      - ..:/theme
     build:
       context: ../
       dockerfile: ./docker/Dockerfile

@@ -5,11 +5,9 @@ WORKDIR /
 RUN git clone https://github.com/mitodl/ocw-to-hugo.git
 WORKDIR /ocw-to-hugo
 RUN yarn install
-WORKDIR /app
-COPY . .
-RUN yarn install
 
 # Download and install Hugo and Go
+WORKDIR /tmp
 ENV HUGO_VERSION='0.80.0'
 ENV HUGO_NAME="hugo_extended_${HUGO_VERSION}_Linux-64bit"
 ENV GO_FILE_NAME="go1.15.7.linux-amd64.tar.gz"
@@ -30,14 +28,15 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download & generate content, copy into place and run node & hugo servers
-CMD rm -rf /ocw-data/* && rm -rf /ocw-to-hugo/private && mkdir /ocw-to-hugo/private && \
+CMD cd /theme && yarn install && \
+  rm -rf /ocw-data/* && rm -rf /ocw-to-hugo/private && mkdir /ocw-to-hugo/private && \
   echo "{\"courses\":[\"${OCW_TEST_COURSE}\"]}" | tee /ocw-to-hugo/private/courses.json && \
   cd /ocw-to-hugo && node . -i private/courses -o /ocw-data -c private/courses.json --download && \
   rm -rf /hugo/* && mkdir /hugo/content && mkdir /hugo/data && \
-  cp /app/docker/docker.go.mod /hugo/go.mod && \
-  cp /app/docker/docker.config.toml /hugo/config.toml && \
+  cp /theme/docker/docker.go.mod /hugo/go.mod && \
+  cp /theme/docker/docker.config.toml /hugo/config.toml && \
   cp -R /ocw-data/content/courses/${OCW_TEST_COURSE}/* /hugo/content/ && \
   cp /ocw-data/data/courses/${OCW_TEST_COURSE}.json /hugo/data/course.json && \
   echo "Starting services..." && \
   export PATH=$PATH:/usr/local/go/bin && \
-  /app/docker/start.sh
+  /theme/docker/start.sh
