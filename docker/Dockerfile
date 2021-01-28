@@ -1,11 +1,5 @@
 FROM node:14
 
-# Clone ocw-to-hugo and install dependencies
-WORKDIR /
-RUN git clone https://github.com/mitodl/ocw-to-hugo.git
-WORKDIR /ocw-to-hugo
-RUN yarn install
-
 # Download and install Hugo and Go
 WORKDIR /tmp
 ENV HUGO_VERSION='0.80.0'
@@ -28,15 +22,15 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download & generate content, copy into place and run node & hugo servers
-CMD cd /theme && yarn install && \
-  rm -rf /ocw-data/* && rm -rf /ocw-to-hugo/private && mkdir /ocw-to-hugo/private && \
-  echo "{\"courses\":[\"${OCW_TEST_COURSE}\"]}" | tee /ocw-to-hugo/private/courses.json && \
-  cd /ocw-to-hugo && node . -i private/courses -o /ocw-data -c private/courses.json --download && \
+CMD cd /ocw-to-hugo && yarn install && cd /theme && yarn install && \
+  rm -rf /ocw-data/* && mkdir /ocw-data/input && mkdir /ocw-data/output && \
+  echo "{\"courses\":[\"${OCW_TEST_COURSE}\"]}" | tee /ocw-data/courses.json && \
+  cd /ocw-to-hugo && node . -i ${OCW_TO_HUGO_INPUT:-/ocw-data/input} -o /ocw-data/output -c /ocw-data/courses.json --download ${OCW_TO_HUGO_DOWNLOAD:-true} && \
   rm -rf /hugo/* && mkdir /hugo/content && mkdir /hugo/data && \
   cp /theme/docker/docker.go.mod /hugo/go.mod && \
   cp /theme/docker/docker.config.toml /hugo/config.toml && \
-  cp -R /ocw-data/content/courses/${OCW_TEST_COURSE}/* /hugo/content/ && \
-  cp /ocw-data/data/courses/${OCW_TEST_COURSE}.json /hugo/data/course.json && \
+  cp -R /ocw-data/output/content/courses/${OCW_TEST_COURSE}/* /hugo/content/ && \
+  cp /ocw-data/output/data/courses/${OCW_TEST_COURSE}.json /hugo/data/course.json && \
   echo "Starting services..." && \
   export PATH=$PATH:/usr/local/go/bin && \
   /theme/docker/start.sh

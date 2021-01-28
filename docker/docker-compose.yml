@@ -10,7 +10,10 @@ services:
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
       - OCW_TEST_COURSE
+      - OCW_TO_HUGO_DOWNLOAD
+      - OCW_TO_HUGO_INPUT
     volumes:
+      - $OCW_TO_HUGO_PATH:/ocw-to-hugo
       - ocw-data:/ocw-data
       - hugo:/hugo
       - ..:/theme
