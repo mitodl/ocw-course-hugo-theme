@@ -16,8 +16,6 @@ services:
     build:
       context: ../
       dockerfile: ./docker/Dockerfile
-      args:
-        - OCW_TEST_COURSE=$OCW_TEST_COURSE
     ports:
       - "3002:3002"
       - "1313:1313"
