@@ -10,13 +10,15 @@ services:
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
       - OCW_TEST_COURSE
+      - OCW_TO_HUGO_PATH
       - OCW_TO_HUGO_DOWNLOAD
       - OCW_TO_HUGO_INPUT
     volumes:
-      - $OCW_TO_HUGO_PATH:/ocw-to-hugo
-      - ocw-data:/ocw-data
-      - hugo:/hugo
       - ..:/theme
+      # A dummy volume is used here if the path is not set
+      - ${OCW_TO_HUGO_PATH:-ocw-to-hugo}:/ocw-to-hugo
+      - ocw-data:/ocw-data
+      - ocw-to-hugo-output:/ocw-to-hugo-output
     build:
       context: ../
       dockerfile: ./docker/Dockerfile
@@ -25,4 +27,5 @@ services:
       - "1313:1313"
 volumes:
   ocw-data:
-  hugo:
+  ocw-to-hugo:
+  ocw-to-hugo-output:
