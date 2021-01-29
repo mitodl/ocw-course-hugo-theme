@@ -10,7 +10,7 @@ This project includes a Docker configuration for local development in the `docke
 | --- | --- | --- | --- |
 | `OCW_TO_HUGO_PATH` | string | No | The path to your locally checked out `ocw-to-hugo` repo |
 | `OCW_TO_HUGO_DOWNLOAD` | boolean | No | A boolean value that determines whether or not course data is downloaded from AWS |
-| `OCW_TO_HUGO_INPUT` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is false | An override for the `-i` flag in `ocw-to-hugo`, used if you already have course data downloaded locally that you want to use |
+| `OCW_TO_HUGO_INPUT` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is false | An override for the `-i` flag in `ocw-to-hugo`, used if you already have course data downloaded locally that you want to use.  Note that this path is used inside the docker container, so if you want a path relative to your local `ocw-to-hugo`, that is mounted inside the container at `/ocw-to-hugo`. |
 | `AWS_BUCKET_NAME` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS bucket to download course data from, i.e. `open-learning-course-data-production` |
 | `AWS_REGION` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS region to connect to |
 | `AWS_ACCESS_KEY_ID` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS access key ID to use |
