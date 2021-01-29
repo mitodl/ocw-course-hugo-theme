@@ -1,10 +1,32 @@
 # ocw-course-hugo-theme
 
-This is a Hugo theme for rendering an OCW course.  It is implemented as a Hugo Module and can be utilized following the instructions [here](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme).  An example implementation can be found [here](https://github.com/mitodl/ocw-course-hugo-starter).  Before attempting to use this theme, you should have Node installed using your preferred method, along with `gulp-cli` if you plan to use the PDF Viewer functionality.
+This is a Hugo theme for rendering an OCW course.  It is implemented as a Hugo Module and can be utilized following the instructions [here](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme).  An example implementation can be found [here](https://github.com/mitodl/ocw-course-hugo-starter).  Existing course data is provided by [`ocw-to-hugo`](https://github.com/mitodl/ocw-to-hugo), or you can provide your own markdown & course metadata.
+
+## running locally with docker
+
+This project includes a Docker configuration for local development in the `docker` folder.  An example environment file can be found at `docker/example.env`.  These variables only need to be set if you are sourcing existing OCW content using `ocw-to-hugo`, otherwise you should place your content in the `docker/hugo/content` folder and your course data template at `docker/hugo/data/course.json`.  Here is a description of the variables that are used:
+
+| key | type | required? | description |
+| --- | --- | --- | --- |
+| `OCW_TO_HUGO_PATH` | string | No | The path to your locally checked out `ocw-to-hugo` repo |
+| `OCW_TO_HUGO_DOWNLOAD` | boolean | No | A boolean value that determines whether or not course data is downloaded from AWS |
+| `OCW_TO_HUGO_INPUT` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is false | An override for the `-i` flag in `ocw-to-hugo`, used if you already have course data downloaded locally that you want to use |
+| `AWS_BUCKET_NAME` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS bucket to download course data from, i.e. `open-learning-course-data-production` |
+| `AWS_REGION` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS region to connect to |
+| `AWS_ACCESS_KEY_ID` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS access key ID to use |
+| `AWS_SECRET_ACCESS_KEY` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is true | The AWS secret access key to use |
+
+
+Once you have the environment configured to your liking, run the following to build the docker image and start it up:
+
+```
+cd docker
+docker-compose up --build
+```
 
 ## building dependencies
 
-To build this theme's dependencies, run the following in the theme directory:
+If you are implementing this theme in your own custom Hugo site, you will need to install some dependencies.  To build this theme's dependencies, run the following in the theme directory:
 
 ```sh
 yarn install
