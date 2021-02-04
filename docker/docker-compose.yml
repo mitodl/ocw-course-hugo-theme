@@ -7,7 +7,9 @@ services:
     environment:
       - AWS_REGION
       - AWS_BUCKET_NAME
-      - AWS_ACCESS_KEY_ID
+      # For some reason ocw-to-hugo is calling this AWS_ACCESS_KEY instead
+      # This should be changed in ocw-to-hugo, but remap it for now
+      - AWS_ACCESS_KEY=$AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
       - OCW_TEST_COURSE
       - OCW_TO_HUGO_PATH
