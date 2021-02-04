@@ -1,7 +1,7 @@
 ---
 
 services:
-  ocw-course-hugo-theme:
+  theme:
     container_name: ocw-course-hugo-theme
     image: ocw-course-hugo-theme:latest
     environment:
