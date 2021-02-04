@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo "Starting services..."
-cd /theme && npm start &
+set -e -o pipefail
+cd /theme
+npm start &
 export PATH=$PATH:/usr/local/go/bin
 # If the path to ocw-to-hugo is not set, use local content
 # Otherwise, download course content and use that instead
