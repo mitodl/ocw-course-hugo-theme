@@ -8,6 +8,7 @@ This project includes a Docker configuration for local development in the `docke
 
 | key | type | required? | description |
 | --- | --- | --- | --- |
+| `OCW_TEST_COURSE` | `string` | Yes | The course ID of the OCW course you are trying to work with, i.e. `1-124j-foundations-of-software-engineering-fall-2000` |
 | `OCW_TO_HUGO_PATH` | string | No | The path to your locally checked out `ocw-to-hugo` repo |
 | `OCW_TO_HUGO_DOWNLOAD` | boolean | No | A boolean value that determines whether or not course data is downloaded from AWS |
 | `OCW_TO_HUGO_INPUT` | string | Only if `OCW_TO_HUGO_DOWNLOAD` is false | An override for the `-i` flag in `ocw-to-hugo`, used if you already have course data downloaded locally that you want to use.  Note that this path is used inside the docker container, so if you want a path relative to your local `ocw-to-hugo`, that is mounted inside the container at `/ocw-to-hugo`. |
