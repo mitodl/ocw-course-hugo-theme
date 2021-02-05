@@ -1,0 +1,33 @@
+---
+
+services:
+  theme:
+    container_name: ocw-course-hugo-theme
+    image: ocw-course-hugo-theme:latest
+    environment:
+      - AWS_REGION
+      - AWS_BUCKET_NAME
+      # For some reason ocw-to-hugo is calling this AWS_ACCESS_KEY instead
+      # This should be changed in ocw-to-hugo, but remap it for now
+      - AWS_ACCESS_KEY=$AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - OCW_TEST_COURSE
+      - OCW_TO_HUGO_PATH
+      - OCW_TO_HUGO_DOWNLOAD
+      - OCW_TO_HUGO_INPUT
+    volumes:
+      - ..:/theme
+      # A dummy volume is used here if the path is not set
+      - ${OCW_TO_HUGO_PATH:-ocw-to-hugo}:/ocw-to-hugo
+      - ocw-data:/ocw-data
+      - ocw-to-hugo-output:/ocw-to-hugo-output
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "3002:3002"
+      - "1313:1313"
+volumes:
+  ocw-data:
+  ocw-to-hugo:
+  ocw-to-hugo-output:
