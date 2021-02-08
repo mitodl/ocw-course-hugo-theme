@@ -1,6 +1,14 @@
 Release Notes
 =============
 
+Version 1.3.0
+-------------
+
+- Add baseurl shortcode (#31)
+- docker configuration (#30)
+- Add aria-expanded to links which expand or collapse content (#23)
+- add parent title to pages that have it set (#25)
+
 Version 1.2.0 (Released January 26, 2021)
 -------------
 
