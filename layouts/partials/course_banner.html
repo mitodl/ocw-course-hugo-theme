@@ -4,11 +4,10 @@
   <div class="max-content-width m-auto px-5 py-6">
     {{ $courseId := $currentPage.Params.course_id }}
     {{ $courseData := .Site.Data.course }}
-    {{ $menu := index .Site.Menus $courseId }}
-    {{ $menuItem := index $menu 0 }}
+    {{ $courseHomePage := .Site.GetPage "/" }}
     <a
       class="{{ $bannerClass }}"
-      href="{{ $menuItem.URL }}"
+      href="{{ $courseHomePage.URL }}"
     >{{ $courseData.course_title }}</a>
   </div>
 </div>
