@@ -1,8 +1,15 @@
+{{- $gtmId := getenv "GTM_ACCOUNT_ID" -}}
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ block "extrahead" . }}{{ end }}
   {{ partial "head.html" . }}
   <body>
+    {{ if $gtmId }}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmId }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {{ end }}
     <div class="overflow-auto">
       {{ block "main" . }}{{ end }}
     </div>
