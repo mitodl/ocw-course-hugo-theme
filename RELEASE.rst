@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.4.0
+Version 1.4.0 (Released February 10, 2021)
 -------------
 
 - Google Tag Manager script (#26)
