@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.5.0
+-------------
+
+- just get this link using .Site.GetPage on the root (#33)
+
 Version 1.4.0 (Released February 10, 2021)
 -------------
 
