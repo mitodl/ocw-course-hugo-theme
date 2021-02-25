@@ -256,6 +256,11 @@ article.content {
     text-transform: uppercase;
   }
 
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
   // sometimes the tables can be wide, and on mobile that can ruin the overall page width
   // this forces the table to scroll if it's too wide
   table {
@@ -293,7 +298,6 @@ article.content {
 }
 
 .course-section-title-container {
-  max-width: 795px;
   border-bottom: 1px solid $border-dark-color;
 }
 
