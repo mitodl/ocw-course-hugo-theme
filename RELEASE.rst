@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.6.0
+-------------
+
+- style updates (#36)
+
 Version 1.5.0 (Released February 16, 2021)
 -------------
 
