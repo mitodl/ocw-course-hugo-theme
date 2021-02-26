@@ -36,3 +36,23 @@ figcaption {
   order: 2;
   font-size: 1.25em;
 }
+
+.approx-students {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $approx-students-red;
+  border-radius: 50%;
+  h1 {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2 {
+    color: $white !important;
+    text-transform: none !important;
+    user-select: none;
+  }
+}
