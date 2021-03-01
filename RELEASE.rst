@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.7.0
+-------------
+
+- add approx-students shortcode (#37)
+
 Version 1.6.0 (Released February 26, 2021)
 -------------
 
