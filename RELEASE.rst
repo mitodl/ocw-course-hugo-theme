@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+Version 1.8.0
+-------------
+
+- remove coming soon class (#44)
+- add search icon to header with link to /search (#42)
+- Add legacy contact link for now (#43)
+
 Version 1.7.0 (Released March 01, 2021)
 -------------
 
