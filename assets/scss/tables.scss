@@ -1,0 +1,19 @@
+.table {
+  thead th,
+  td {
+    vertical-align: middle !important;
+  }
+
+  .fullwidth-cell {
+    position: relative;
+    display: inline;
+  }
+
+  .fullwidth-cell-inner {
+    position: absolute;
+    width: calc(
+      (#{$max-content-width} - #{$desktop-nav-max-width}) * 0.6666667
+    );
+    margin: auto;
+  }
+}

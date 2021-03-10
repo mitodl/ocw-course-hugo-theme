@@ -12,7 +12,7 @@
 
 .desktop-nav {
   @include media-breakpoint-up(xl) {
-    max-width: 470px;
+    max-width: $desktop-nav-max-width;
   }
 }
 
