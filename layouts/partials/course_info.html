@@ -1,6 +1,6 @@
 {{ $courseId := .context.Params.course_id }}
 {{ $courseData := .context.Site.Data.course }}
-{{ $inPanel := .args.inPanel }}
+{{ $inPanel := .inPanel }}
 <div class="table-responsive course-info {{ if not $inPanel }}collapsed{{ end }}">
   <div class="course-info-expander">
     {{ if not $inPanel }}
