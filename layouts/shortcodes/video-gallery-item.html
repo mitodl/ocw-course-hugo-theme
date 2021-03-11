@@ -2,7 +2,7 @@
     {{- with .Site.GetPage (.Get "href") }}
 		<a class="video-link" href="{{- .URL -}}">
     {{ else }}
-    <a class="video-link" href="{{- .Site.BaseURL -}}{{- .Get "href" -}}">
+    <a class="video-link" href="{{- partial "site_root_url.html" (.Get "href") -}}">
 		{{ end }}
       <div class="inner-container">
         <div class="left-col">
