@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+Version 1.9.0
+-------------
+
+- vertical align table cell content (#49)
+- .inPanel not .args.inPanel (#52)
+- video gallery item baseurl (#50)
+
 Version 1.8.1 (Released March 15, 2021)
 -------------
 
