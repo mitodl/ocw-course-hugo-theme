@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.8.1 (Released March 15, 2021)
+-------------
+
+- modify docker start script to match new ocw-to-hugo output structure (#45)
+
 Version 1.8.0 (Released March 08, 2021)
 -------------
 
