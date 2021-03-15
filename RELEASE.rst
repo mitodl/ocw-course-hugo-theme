@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.9.0
+Version 1.9.0 (Released March 15, 2021)
 -------------
 
 - vertical align table cell content (#49)
