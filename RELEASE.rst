@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.9.1
+Version 1.9.1 (Released March 17, 2021)
 -------------
 
 - get menu keyed on leftnav and remove unnecessary variables (#53)
