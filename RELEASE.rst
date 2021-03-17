@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.9.2
+-------------
+
+- td colspan shortcode (#55)
+
 Version 1.9.1 (Released March 17, 2021)
 -------------
 
