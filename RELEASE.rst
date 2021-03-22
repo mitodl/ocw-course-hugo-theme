@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.10.0
+Version 1.10.0 (Released March 22, 2021)
 --------------
 
 - Larger font-size for description (#59)
