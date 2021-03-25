@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.10.1
+--------------
+
+- add the heading shortcode (#62)
+
 Version 1.10.0 (Released March 22, 2021)
 --------------
 
