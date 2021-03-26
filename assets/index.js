@@ -15,6 +15,7 @@ import "nanogallery2/src/jquery.nanogallery2.core.js"
 import { initPdfViewers } from "./js/pdf_viewer"
 import { initSentry } from "./js/sentry"
 import { initDesktopCourseInfoToggle } from "./js/course_info_toggle"
+import { rewriteCourseInfoLinks } from "./js/course_info_links"
 import { initCourseInfoExpander } from "./js/course_expander"
 
 window.jQuery = $
@@ -35,4 +36,5 @@ $(document).ready(() => {
   initSentry()
   initDesktopCourseInfoToggle()
   initCourseInfoExpander()
+  rewriteCourseInfoLinks()
 })
