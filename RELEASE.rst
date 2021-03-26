@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+Version 1.10.2
+--------------
+
+- responsive tables (#66)
+- update docker config to support config folder (#65)
+
 Version 1.10.1 (Released March 25, 2021)
 --------------
 
