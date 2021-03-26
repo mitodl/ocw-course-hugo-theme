@@ -1,3 +1,4 @@
+/* global $ false */
 /* eslint-disable no-console */
 export const initPdfViewers = () => {
   $(".pdf-wrapper").each(async (index, pdfWrapper) => {
