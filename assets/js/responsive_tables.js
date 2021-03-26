@@ -9,7 +9,7 @@ function responsiveTables() {
     const rows = tbody.getElementsByTagName("tr")
     for (const row of rows) {
       const cells = row.getElementsByTagName("td")
-      for (i = 0; i < cells.length; i++) {
+      for (let i = 0; i < cells.length; i++) {
         if (headings.length >= i + 1) {
           cells[i].setAttribute(
             "data-title",
