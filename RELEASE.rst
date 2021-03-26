@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.10.2
+Version 1.10.2 (Released March 26, 2021)
 --------------
 
 - responsive tables (#66)
