@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.11.0 (Released March 30, 2021)
+--------------
+
+- Set up linting (#70)
+
 Version 1.10.2 (Released March 26, 2021)
 --------------
 
