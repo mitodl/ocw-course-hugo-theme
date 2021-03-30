@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.11.1
+Version 1.11.1 (Released March 30, 2021)
 --------------
 
 - Add script for Appzi (#73)
