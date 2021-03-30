@@ -9,24 +9,24 @@ module.exports = merge(common, {
   mode: "production",
 
   output: {
-    filename: "[name].[hash:5].js",
+    filename:      "[name].[hash:5].js",
     chunkFilename: "[id].[hash:5].css"
   },
 
   optimization: {
     minimizer: [
       new TerserPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
+        cache:         true,
+        parallel:      true,
+        sourceMap:     true,
         terserOptions: {
           ecma: 6
         }
       }),
 
       new MiniCssExtractPlugin({
-        publicPath: "./",
-        filename: "[name].[hash:5].css",
+        publicPath:    "./",
+        filename:      "[name].[hash:5].css",
         chunkFilename: "[id].[hash:5].css"
       }),
 

@@ -8,20 +8,20 @@ module.exports = merge(common, {
   mode: "development",
 
   output: {
-    filename: "[name].js",
+    filename:      "[name].js",
     chunkFilename: "[id].css",
-    publicPath: "/"
+    publicPath:    "/"
   },
 
   devtool: "eval-source-map",
 
   devServer: {
-    port: process.env.PORT || 3002,
-    hot: true,
-    quiet: false,
-    open: false,
+    port:    process.env.PORT || 3002,
+    hot:     true,
+    quiet:   false,
+    open:    false,
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin":  "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization"
@@ -38,7 +38,7 @@ module.exports = merge(common, {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename:      "[name].css",
       chunkFilename: "[id].css"
     })
   ]
