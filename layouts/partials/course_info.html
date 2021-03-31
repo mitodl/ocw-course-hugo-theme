@@ -18,7 +18,7 @@
       <tr>
         <td class="pl-0">{{ if eq (len $courseData.instructors) 1 }}Instructor{{ else }}Instructors{{ end }}:</td>
         <td>
-          {{ partial "partial_collapse_list.html" (dict "list" $courseData.instructors "id" "instructors" "klass" "course-info-instructor") }}
+          {{ partial "partial_collapse_list.html" (dict "list" $courseData.instructors "id" "instructors" "key" "instructor" "klass" "course-info-instructor") }}
         </td>
       </tr>
       <tr>
@@ -28,7 +28,7 @@
       <tr>
         <td class="pl-0">Departments:</td>
         <td>
-          {{ partial "partial_collapse_list.html" (dict "list" $courseData.departments "id" "departments" "klass" "course-info-department") }}
+          {{ partial "partial_collapse_list.html" (dict "list" $courseData.departments "id" "departments" "key" "department" "klass" "course-info-department") }}
         </td>
       </tr>
       {{ if not $inPanel }}
@@ -48,11 +48,12 @@
       <tr>
         <td class="pl-0 pb-3">Level:</td>
         <td>
-          <a href="#" class="course-info-level">
-            {{ $courseData.level }}
+          <a href="{{ $courseData.level.url }}" class="course-info-level">
+            {{ $courseData.level.level }}
           </a>
         </td>
       </tr>
     </table>
   </div>
 </div>
+
