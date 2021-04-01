@@ -5,26 +5,26 @@
   {{ if gt (len $topic.subtopics) 0 }}
     {{ range $subtopic := $topic.subtopics }}
       {{ if gt (len $subtopic.specialities) 0 }}
-        {{ range $specialty := $subtopic.specialities }}
+        {{ range $speciality := $subtopic.specialities }}
           <li>
-            <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+            <a href="{{ $topic.url }}" class="text-black course-info-topic">{{ $topic.topic }}</a>
             >
-            <a class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
+            <a href="{{ $subtopic.url }}" class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
             >
-            <a class="text-black course-info-topic">{{ $specialty }}</a>
+            <a href="{{ $speciality.url }}" class="text-black course-info-topic">{{ $speciality.speciality }}</a>
           </li>
         {{ end }}
       {{ else }}
         <li>
-          <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+          <a href="{{ $topic.url }}" class="text-black course-info-topic">{{ $topic.topic }}</a>
           >
-          <a class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
+          <a href="{{ $subtopic.url }}" class="text-black course-info-topic">{{ $subtopic.subtopic }}</a>
         </li>
       {{ end }}
     {{ end }}
   {{ else }}
     <li>
-      <a class="text-black course-info-topic">{{ $topic.topic }}</a>
+      <a href="{{ $topic.url }}" class="text-black course-info-topic">{{ $topic.topic }}</a>
     </li>
   {{ end }}
 {{ end }}

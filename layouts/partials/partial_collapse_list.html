@@ -1,3 +1,4 @@
+{{ $params := . }}
 {{ $className := .klass | default "coming-soon" }}
 {{ $useLinks := .useLinks | default true }}
 {{ if gt (len .list) 4 }}
@@ -13,14 +14,20 @@
   <div class="partial-collapse collapse" id="partial-collapse-container_{{ .id }}">
     <ul class="list-unstyled m-0">
       {{ range $item := .list }}
+      {{ $text := "" }}
+      {{ if isset $params "key" }}
+        {{ $text = index $item $params.key }}
+      {{ else }}
+        {{ $text = $item }}
+      {{ end }}
       <li>
         {{ if $useLinks }}
-        <a href="#" class="partial-collapse-link {{ $className }}">
-          {{ $item }}
+        <a href="{{ index $item "url" }}" class="partial-collapse-link {{ $className }}">
+          {{ $text }}
         </a>
         {{ else }}
-        {{ $item }}
-        {{end }}
+        {{ $text }}
+        {{ end }}
       </li>
       {{ end }}
     </ul>
@@ -30,14 +37,20 @@
 {{ else }}
 <ul class="list-unstyled m-0">
   {{ range $item := .list }}
+  {{ $text := "" }}
+  {{ if isset $params "key" }}
+    {{ $text = index $item $params.key }}
+  {{ else }}
+    {{ $text = $item }}
+  {{ end }}
   <li>
     {{ if $useLinks }}
-    <a href="#" class="{{ $className }}">
-      {{ $item }}
+    <a href="{{ index $item "url" }}" class="{{ $className }}">
+      {{ $text }}
     </a>
     {{ else }}
-    {{ $item }}
-    {{end }}
+    {{ $text }}
+    {{ end }}
   </li>
   {{ end }}
 </ul>
