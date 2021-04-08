@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+Version 1.12.0
+--------------
+
+- course_feature_tags template update (#80)
+
 Version 1.11.2 (Released April 02, 2021)
 --------------
 
