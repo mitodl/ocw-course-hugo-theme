@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.12.1
+Version 1.12.1 (Released April 09, 2021)
 --------------
 
 - Add ocw-to-hugo as a dependency (#79)
