@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Version 1.13.0
+Version 1.13.0 (Released April 23, 2021)
 --------------
 
 - prepend baseurl to course feature urls (#85)
